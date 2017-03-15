@@ -15,7 +15,7 @@ module.exports = function(content) {
   // console.log('context', this)
 	plugin.cacheable && plugin.cacheable();
 	var query = loaderUtils.getOptions(this);
-	plugin.resourceQuery = parseQuery(this.resourceQuery || '?');
+	plugin.resourceQuery = parseQuery(this.resourceQuery || '?') || {};
 	content = resolve(content, plugin, query);
 	return prepareResult(content, query);
 };
@@ -40,7 +40,7 @@ module.exports.resultCustomizer = function(customizer) {
 };
 
 function prepareResult(content, opts) {
-	if (opts.raw) return content;
+	if (opts && opts.raw) return content;
 	if (typeof content === 'string' && content.indexOf('module.exports') === 0) return content;
 	return 'module.exports = ' + JSON.stringify(content) + ';';
 }
