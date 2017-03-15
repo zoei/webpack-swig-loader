@@ -12,7 +12,6 @@ var loaderUtils = require('loader-utils'),
 
 module.exports = function(content) {
 	var plugin = this;
-  // console.log('context', this)
 	plugin.cacheable && plugin.cacheable();
 	var query = loaderUtils.getOptions(this);
 	plugin.resourceQuery = parseQuery(this.resourceQuery || '?') || {};
