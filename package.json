@@ -1,0 +1,29 @@
+{
+  "name": "webpack-swig-loader",
+  "version": "0.1.0",
+  "description": "A webpack loader for swig, support Webpack2.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoei/webpack-swig-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "swig",
+    "webpack2"
+  ],
+  "author": "zoei@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoei/webpack-swig-loader/issues"
+  },
+  "homepage": "https://github.com/zoei/webpack-swig-loader#readme",
+  "dependencies": {
+    "loader-utils": "^1.0.4",
+    "swig": "^1.4.2"
+  }
+}
